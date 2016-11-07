@@ -36,5 +36,9 @@ describe Dieta do
 		it 'Debe mostrar hidratos de carbono' do
 			expect(@menu.h).to eq('10')
 		end
+
+		it 'Debe mostrar un plato' do
+			expect(@menu.get_plato(1)).to eq(['Pera','1 unidad','60gr'])
+		end
 	end
 end
