@@ -1,7 +1,9 @@
 module Dieta
-   
-   class Dieta
-
-   end
+	class Dieta
+		attr_reader :t
+		def initialize(t)
+			@t = t
+		end
+        end
    
 end
