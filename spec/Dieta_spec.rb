@@ -1,2 +1,2 @@
-require "spec_help"
+require "spec_helper"
 require "./lib/dieta.rb"
