@@ -5,7 +5,7 @@ describe Dieta do
 
 	context "Menu de dieta" do
 
-		before:each do
+		before :each do
 			menu=Dieta::Dieta.new(['DESAYUNO'])
 		end
 
