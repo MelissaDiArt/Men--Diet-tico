@@ -1,8 +1,8 @@
 module Dieta
 	class Dieta
-		attr_reader :t, :ing, :pl, :v
-		def initialize(t,ing,pl,v)
-			@t, @ing, @pl, @v = t, ing, pl, v
+		attr_reader :t, :ing, :pl, :v, :p, :g, :h
+		def initialize(t,ing,pl,v,p,g,h)
+			@t, @ing, @pl, @v, @p, @g, @h = t, ing, pl, v, p, g, h
 		end
         end
    
