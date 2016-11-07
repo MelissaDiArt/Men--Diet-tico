@@ -42,7 +42,7 @@ describe Dieta do
 		end
 
 		it 'Debe mostrar todo el menu' do
-			expect(@menu.to_s).to eq('DESAYUNO (15%)\n- Manzana, 1 unidad, 60gr\n-Pera, 1 unidad, 60gr\nV.C.T | %\t400 kcal | 10% - 20% - 10%\n')
+			expect(@menu.to_s).to eq('DESAYUNO (15%)\n- Manzana, 1 unidad, 60gr\n- Pera, 1 unidad, 60gr\nV.C.T | %\t400 kcal | 10% - 20% - 10%\n')
 		end
 	end
 end
