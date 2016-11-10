@@ -82,6 +82,10 @@ describe Lista do
 			expect(@lista1.extract()).to eq(7)
 			expect(@lista1.head[:v]).to eq(6)
 		end
+	
+		it 'Mostrar el valor de la cabeza' do
+			expect(@lista1.head[:v]).to eq(6)
+		end
 	end
 
 end
