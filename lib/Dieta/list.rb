@@ -6,7 +6,7 @@ class Lista
 	
 	def initialize()
 	
-		@head = nil
+		@head = Nodo.new(nil,nil)
 	end
 
 	def insert(valor)
@@ -19,4 +19,18 @@ class Lista
 		@head = @head[:s]
 		aux
 	end
+	
+	def to_s()
+		z=1
+		aux=@head
+		m =""
+		while(aux[:s] != nil)
+
+			m += "#{z}) #{aux[:v].to_s}\n"
+			aux = aux[:s]
+			z += 1
+		end
+		m
+	end
+
 end 
