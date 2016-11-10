@@ -62,4 +62,14 @@ end
 
 describe Lista do
 
+	context 'Pruebas de la lista' do
+		before :each do
+			@lista1 = Lista.new()
+		end
+		it'Insertar un elemento a la lista' do
+			@lista1.insert(5)
+			expect(@lista1.head[:v]).to eq(5)	
+		end
+	end
+
 end
