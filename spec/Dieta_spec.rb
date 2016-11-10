@@ -1,5 +1,6 @@
 require "spec_helper"
 require "./lib/dieta.rb"
+require "./lib/list.rb"
 
 describe Dieta do 
 
@@ -46,3 +47,4 @@ describe Dieta do
 		end
 	end
 end
+
