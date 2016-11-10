@@ -57,5 +57,5 @@ describe Nodo do
 			expect(@nodo.v).to eq(1)
 			expect(@nodo.s).to eq(nil)
 		end
-	
+	end
 end
