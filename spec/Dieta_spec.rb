@@ -63,7 +63,7 @@ end
 describe Lista do
 
 	context 'Pruebas de la lista' do
-		before :each do
+		before :all do
 			@lista1 = Lista.new()
 		end
 		it'Insertar un elemento a la lista' do
@@ -80,7 +80,7 @@ describe Lista do
 
 		it 'Extraer el primer elemento de la lista' do
 			expect(@lista1.extract()).to eq(7)
-			expect(@lista1.head[:v]).to eq(4)
+			expect(@lista1.head[:v]).to eq(6)
 		end
 	end
 

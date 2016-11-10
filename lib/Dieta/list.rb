@@ -14,4 +14,9 @@ class Lista
 		@head = x
 	end
 
+	def extract()
+		aux = @head[:v]
+		@head = @head[:s]
+		aux
+	end
 end 
