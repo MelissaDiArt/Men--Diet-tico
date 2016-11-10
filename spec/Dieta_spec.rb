@@ -49,4 +49,13 @@ end
 
 describe Nodo do
 
+	context "Existe un nodo" do
+		before :each do
+			@nodo = Nodo.new(1,nil)
+		end
+		it 'Debe existir un valor y un siguiente' do
+			expect(@nodo.v).to eq(1)
+			expect(@nodo.s).to eq(nil)
+		end
+	
 end
