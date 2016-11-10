@@ -70,6 +70,15 @@ describe Lista do
 			@lista1.insert(5)
 			expect(@lista1.head[:v]).to eq(5)	
 		end
+		
+		it 'Insertar varios elementos en la lista' do
+			@lista1.insert(6)
+			expect(@lista1.head[:v]).to eq(6)
+			@lista1.insert(7)
+			expect(@lista1.head[:v]).to eq(7)
+		end
+
+
 	end
 
 end
