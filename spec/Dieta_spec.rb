@@ -86,6 +86,11 @@ describe Lista do
 		it 'Mostrar el valor de la cabeza' do
 			expect(@lista1.head[:v]).to eq(6)
 		end
+
+		it 'Mostrar el contenido' do
+			expect(@lista1.to_s).to eq("1) 6\n2) 5\n")
+		end
+
 	end
 
 end
