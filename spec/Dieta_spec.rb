@@ -47,3 +47,6 @@ describe Dieta do
 	end
 end
 
+describe Nodo do
+
+end
