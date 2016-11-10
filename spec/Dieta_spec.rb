@@ -78,7 +78,10 @@ describe Lista do
 			expect(@lista1.head[:v]).to eq(7)
 		end
 
-
+		it 'Extraer el primer elemento de la lista' do
+			expect(@lista1.extract()).to eq(7)
+			expect(@lista1.head[:v]).to eq(4)
+		end
 	end
 
 end
