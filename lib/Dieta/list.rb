@@ -15,7 +15,7 @@ class Lista_DE
 		@prev = nil
 	end
 
-	def extract()
+	def extract_ini()
 		aux = @head[:v]
 		@head = @head[:s]
 		aux
