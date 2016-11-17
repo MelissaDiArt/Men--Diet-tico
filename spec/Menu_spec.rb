@@ -70,3 +70,9 @@ describe "Pruebas nodo" do
 		end
 	end
 end
+
+describe Lista_DE do
+
+
+
+end
