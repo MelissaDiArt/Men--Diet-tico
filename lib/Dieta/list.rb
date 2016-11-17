@@ -9,9 +9,10 @@ class Lista_DE
 		@head = Nodo.new(nil,nil,nil)
 	end
 
-	def insert(valor)
-		x = Nodo.new(valor,@head)
+	def insert_ini(valor)
+		x = Nodo.new(valor,@head,@prev)
 		@head = x
+		@prev = nil
 	end
 
 	def extract()

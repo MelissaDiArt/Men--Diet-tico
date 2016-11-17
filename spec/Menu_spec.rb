@@ -79,11 +79,11 @@ describe Lista_DE do
 			@lista_DE1 = Lista_DE.new()
 		end
 
-	end
 	
-	it "Insertar un elemento a la lista" do
+		it "Insertar un elemento a la lista" do
 		
-		@lista_DE1.insert_ini(5)
-		expect(@lista_DE1.head[:v]).to eq(5)
+			@lista_DE1.insert_ini(5)
+			expect(@lista_DE1.head[:v]).to eq(5)
+		end
 	end
 end
