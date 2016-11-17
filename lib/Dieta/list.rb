@@ -6,7 +6,7 @@ class Lista_DE
 	
 	def initialize()
 	
-		@head = Nodo.new(nil,nil)
+		@head = Nodo.new(nil,nil,nil)
 	end
 
 	def insert(valor)

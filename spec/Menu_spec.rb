@@ -73,6 +73,12 @@ end
 
 describe Lista_DE do
 
+	context "Pruebas de la lista_DE" do 
+	
+		before :all do
+			@lista_DE1 = Lista_DE.new()
+		end
 
+	end
 
 end
