@@ -1,5 +1,6 @@
-require "./lib/dieta.rb"
-
+require "spec_helper"
+require "dieta"
+=begin
 context " Pruebas totales" do
 	before :all do
                         
@@ -51,5 +52,21 @@ context " Pruebas totales" do
 
         	end
 
+	end
+end
+=end
+describe "Pruebas nodo" do
+
+	context "Debe existir un nodo" do
+		before :each do
+			@nodo = Nodo.new(1,nil,nil)
+		end
+
+		it "Debe existir un nodo con su siguiente, su anterior y su dato" do
+			expect(@nodo.v).to eq(1)
+			expect(@nodo.s).to eq(nil)
+			expect(@nodo.p).to eq(nil) 
+	
+		end
 	end
 end
