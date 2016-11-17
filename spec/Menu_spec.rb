@@ -80,10 +80,22 @@ describe Lista_DE do
 		end
 
 	
-		it "Insertar un elemento a la lista" do
+		it "Insertar por el inicio un elemento a la lista" do
 		
 			@lista_DE1.insert_ini(5)
 			expect(@lista_DE1.head[:v]).to eq(5)
+			expect(@lista_DE1.head[:p]).to eq(nil)
 		end
+
+		it "Insertar varios elementos en la lista_DE" do
+
+			@lista_DE1.insert_ini(6)
+			expect(@lista_DE1.head[:v]).to eq(6)
+			@lista_DE1.insert_ini(7)
+			expect(@lista_DE1.head[:v]).to eq(7)
+		end
+
+
+
 	end
 end
