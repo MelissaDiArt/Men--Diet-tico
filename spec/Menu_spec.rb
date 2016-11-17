@@ -87,7 +87,7 @@ describe Lista_DE do
 			expect(@lista_DE1.head[:p]).to eq(nil)
 		end
 
-		it "Insertar varios elementos en la lista_DE" do
+		it "Insertar varios por el inicio elementos en la lista_DE" do
 
 			@lista_DE1.insert_ini(6)
 			expect(@lista_DE1.head[:v]).to eq(6)
@@ -95,7 +95,11 @@ describe Lista_DE do
 			expect(@lista_DE1.head[:v]).to eq(7)
 		end
 
-
+		it "Extraer el primer elemento de la lista" do
+		
+			expect(@lista_DE1.extract_ini()).to eq(7)
+			expect(@lista_DE1.head[:v]).to eq(6)
+		end		
 
 	end
 end
