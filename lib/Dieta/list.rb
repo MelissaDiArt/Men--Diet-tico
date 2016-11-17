@@ -1,4 +1,4 @@
-Nodo=Struct.new(:v,:s)
+Nodo=Struct.new(:v,:s,:p)
 
 class Lista 
 
