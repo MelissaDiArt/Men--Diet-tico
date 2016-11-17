@@ -1,6 +1,6 @@
 Nodo=Struct.new(:v,:s,:p)
 
-class Lista 
+class Lista_DE
 
 	attr_accessor :head
 	
