@@ -101,5 +101,9 @@ describe Lista_DE do
 			expect(@lista_DE1.head[:v]).to eq(6)
 		end		
 
+		it "Debe existir un tail" do 
+	
+			expect(@lista_DE1.tail[:v]).to eq(5)
+		end
 	end
 end
