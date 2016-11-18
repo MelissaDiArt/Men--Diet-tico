@@ -111,5 +111,12 @@ describe Lista_DE do
 			expect(@lista_DE1.tail[:v]).to eq(4)
 			expect(@lista_DE1.tail[:p][:v]).to eq(5)
 		end
+
+		it "Extraer por el final un elemento de la lista" do
+			
+			expect(@lista_DE1.extract_fin()).to eq(4)
+			expect(@lista_DE1.tail[:v]).to eq (5)
+
+		end
 	end
 end
