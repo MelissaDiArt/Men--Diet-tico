@@ -146,17 +146,13 @@ describe Dieta do
 
 			expect(@edad1.is_a?Dieta::Dieta).to eq(true)
 			expect(@alimentos.is_a?Dieta::Dieta).to eq(true)
-			
 			expect(@edad1.instance_of?Dieta::Edad).to eq(true)
 		end
 
 
 		it "Mostrar el contenido alimentos" do
 			expect(@alimentos.to_s).to eq("MERIENDA (15%)\n- Manzana, 1 unidad, 60gr\n- Pera, 1 unidad, 60gr\nV.C.T | %\t400 kcal | 10% - 20% - 10%\nverduras y hortalizas")
+
 		end
 	end
-
-
-	
-
 end
