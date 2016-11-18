@@ -28,6 +28,13 @@ module Dieta
 			s = self.to_s  		
 			s << "#{@edad}"
 		end	
+	end
+
+	class Alimentos < Dieta
+		def initialize(t,ing,pl,v,p,g,h,a)
+			super(t,ing,pl,v,p,g,h)
+			@alimentos = a
+		end
 	end   
 end
 
