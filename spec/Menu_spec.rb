@@ -129,13 +129,18 @@ describe Dieta do
 
 		before :all do
 
-			@edad1 = Dieta::Edad.new('MERIENDA','15%',[['Manzana','1 unidad','60gr'],['Pera','1 unidad','60gr']],'400','10','20','10','4 a 8')
+			@edad1 = Dieta::Edad.new('MERIENDA','15%',[['Manzana','1 unidad','60gr'],['Pera','1 unidad','60gr']],'400','10','20','10','4 a 8 años')
 		end
 		
 		it "Dieta es superclass de Edad" do
 
 			expect(Dieta::Edad.superclass).to eq(Dieta::Dieta)
 		end
+		
+	        it 'Mostrar el contenido' do
+                       expect(@edad1.mostrar_edad).to eq("1) MERIENDA (15%)\n- Manzana, 1 unidad, 60gr\n4 a 8 años")
+                end
+
 	end
 
 
