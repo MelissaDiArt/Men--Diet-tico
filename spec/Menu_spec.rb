@@ -55,6 +55,7 @@ context " Pruebas totales" do
 	end
 end
 =end
+
 describe "Pruebas nodo" do
 
 	context "Debe existir un nodo" do
@@ -128,11 +129,16 @@ describe Dieta do
 
 		before :all do
 
-			@edad1 = Dieta::Edad.new()
+			@edad1 = Dieta::Edad.new('MERIENDA','15%',[['Manzana','1 unidad','60gr'],['Pera','1 unidad','60gr']],'400','10','20','10','4 a 8')
+		end
+		
+		it "Dieta es superclass de Edad" do
+
+			expect(Dieta::Edad.superclass).to eq(Dieta::Dieta)
 		end
 	end
 
 
-
+	
 
 end

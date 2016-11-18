@@ -19,7 +19,10 @@ module Dieta
         end
 
 	class Edad < Dieta
-	
+		def initialize(t,ing,pl,v,p,g,h,e)
+			super(t,ing,pl,v,p,g,h)
+			@edad = e
+		end	
 	end   
 end
 
