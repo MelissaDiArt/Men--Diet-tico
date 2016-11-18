@@ -22,6 +22,11 @@ module Dieta
 		def initialize(t,ing,pl,v,p,g,h,e)
 			super(t,ing,pl,v,p,g,h)
 			@edad = e
+		end
+
+		def mostrar_edad()
+			s = self.to_s  		
+			s << "#{@edad}"
 		end	
 	end   
 end

@@ -138,7 +138,7 @@ describe Dieta do
 		end
 		
 	        it 'Mostrar el contenido' do
-                       expect(@edad1.mostrar_edad).to eq("1) MERIENDA (15%)\n- Manzana, 1 unidad, 60gr\n4 a 8 años")
+		       expect(@edad1.mostrar_edad).to eq("MERIENDA (15%)\n- Manzana, 1 unidad, 60gr\n- Pera, 1 unidad, 60gr\nV.C.T | %\t400 kcal | 10% - 20% - 10%\n4 a 8 años")
                 end
 
 	end
