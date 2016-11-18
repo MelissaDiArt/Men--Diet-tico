@@ -17,5 +17,10 @@ module Dieta
 			s << "V.C.T | %\t#{@v} kcal | #{@p}% - #{@g}% - #{@h}%\n"
 		end
         end
-   
+
+	class Edad < Dieta
+	
+	end   
 end
+
+

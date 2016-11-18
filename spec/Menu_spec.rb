@@ -122,13 +122,13 @@ describe Lista_DE do
 end
 
 
-describe Edad do
+describe Dieta do
 
 	context "Pruebas de herencia" do
 
 		before :all do
 
-			@edad1 = Edad.new()
+			@edad1 = Dieta::Edad.new()
 		end
 	end
 
