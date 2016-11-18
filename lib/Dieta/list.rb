@@ -30,9 +30,16 @@ class Lista_DE
 	end
 
 	def extract_ini()
-		aux = @head[:v]
-		@head = @head[:s]
-		aux
+
+		if(@head.nil?)
+			puts "La lista esta vacía"
+
+		else
+			aux = @head[:v]
+			@head = @head[:s]
+			@head.p = nil
+			aux
+		end
 	end
 
 	def insert_fin(valor)
@@ -52,6 +59,18 @@ class Lista_DE
 		
 	end
 	
+	def extract_fin()
+		
+		if(@head.nil?)
+			puts "La lista esta vacía"
+		else
+			aux = @tail[:v]
+			@tail = @tail[:p]
+			@tail.s = nil
+			aux
+		end
+	end
+
 	def to_s()
 		z=1
 		aux=@head
