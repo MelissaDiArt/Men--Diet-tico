@@ -2,23 +2,54 @@ Nodo=Struct.new(:v,:s,:p)
 
 class Lista_DE
 
-	attr_accessor :head
+	attr_accessor :head , :tail
 	
 	def initialize()
-	
-		@head = Nodo.new(nil,nil,nil)
+
+		@head = nil
+		@tail = nil
 	end
 
 	def insert_ini(valor)
-		x = Nodo.new(valor,@head,@prev)
+
+		x = Nodo.new(valor,@head,nil)
+
+		if(@head.nil?) 
+
+			@tail = x
+	
+		else
+		
+			@head.p = x
+
+		end 
+
 		@head = x
-		@prev = nil
+		 
+			
 	end
 
 	def extract_ini()
 		aux = @head[:v]
 		@head = @head[:s]
 		aux
+	end
+
+	def insert_fin(valor)
+		
+		y = Nodo.new(valor,nil,@tail)
+
+		if(@head.nil?)
+
+			@head = y
+		
+		else
+		
+			@tail.s = y
+		end
+
+		@tail = y
+		
 	end
 	
 	def to_s()
