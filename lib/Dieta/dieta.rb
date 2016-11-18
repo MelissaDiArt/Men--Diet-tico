@@ -35,6 +35,11 @@ module Dieta
 			super(t,ing,pl,v,p,g,h)
 			@alimentos = a
 		end
+
+		def mostrar_alimentos()
+			s = self.to_s
+			s << "#{@alimentos}"
+		end
 	end   
 end
 
