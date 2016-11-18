@@ -23,11 +23,12 @@ module Dieta
 			super(t,ing,pl,v,p,g,h)
 			@edad = e
 		end
+	
 
-		def mostrar_edad()
-			s = self.to_s  		
-			s << "#{@edad}"
-		end	
+		def to_s()
+                        s = super.to_s
+                        s << "#{@edad}"
+                end
 	end
 
 	class Alimentos < Dieta
@@ -36,10 +37,11 @@ module Dieta
 			@alimentos = a
 		end
 
-		def mostrar_alimentos()
-			s = self.to_s
-			s << "#{@alimentos}"
-		end
+
+ 		def to_s()
+                        s = super.to_s
+                        s << "#{@alimentos}"
+                end
 	end   
 end
 

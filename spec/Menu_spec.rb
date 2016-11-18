@@ -1,60 +1,5 @@
 require "spec_helper"
 require "dieta"
-=begin
-context " Pruebas totales" do
-	before :all do
-                        
-                @desayuno = Dieta::Dieta.new('DESAYUNO','15%',[['Manzana','1 unidad','60gr'],['Pera','1 unidad','60gr']],'400','10','20','10')
-		@almuerzo = Dieta::Dieta.new('ALMUERZO','15%',[['Manzana','1 unidad','60gr'],['Pera','1 unidad','60gr']],'400','10','20','10')
-	 	@merienda = Dieta::Dieta.new('MERIENDA','15%',[['Manzana','1 unidad','60gr'],['Pera','1 unidad','60gr']],'400','10','20','10')
-		@cena = Dieta::Dieta.new('CENA','15%',[['Manzana','1 unidad','60gr'],['Pera','1 unidad','60gr']],'400','10','20','10')
-		@lista1 = Lista.new()
-	end
-		
-	describe Nodo do
-
-                it 'Debe existir un valor y un siguiente' do
-                        expect(@lista1.head[:v])
-                        expect(@lista1.head[:s])
-                end
-        end
-
-	describe Lista do
-
-        	context 'Pruebas de la lista' do
-      
-                	it'Insertar un elemento a la lista' do
-                        	@lista1.insert(@desayuno)
-                        	expect(@lista1.head[:v]).to have_attributes(:t => 'DESAYUNO', :ing => '15%', :pl =>[['Manzana','1 unidad','60gr'],['Pera','1 unidad','60gr']], :v => '400', :p => '10', :g => '20', :h => '10')
-                	end
-
-                	it 'Insertar varios elementos en la lista' do
-                        	@lista1.insert(@almuerzo)
-                        	expect(@lista1.head[:v]).to have_attributes(:t => 'ALMUERZO', :ing => '15%', :pl =>[['Manzana','1 unidad','60gr'],['Pera','1 unidad','60gr']], :v => '400', :p => '10', :g => '20', :h => '10')
-                        	@lista1.insert(@merienda)
-                       		expect(@lista1.head[:v]).to have_attributes(:t => 'MERIENDA', :ing => '15%', :pl =>[['Manzana','1 unidad','60gr'],['Pera','1 unidad','60gr']], :v => '400', :p => '10', :g => '20', :h => '10')
-               			@lista1.insert(@cena)
-				expect(@lista1.head[:v]).to have_attributes(:t => 'CENA', :ing => '15%', :pl =>[['Manzana','1 unidad','60gr'],['Pera','1 unidad','60gr']], :v => '400', :p => '10', :g => '20', :h => '10')
-		 	end
-
-                	it 'Extraer el primer elemento de la lista' do
-                	        expect(@lista1.extract()).to have_attributes(:t => 'CENA', :ing => '15%', :pl =>[['Manzana','1 unidad','60gr'],['Pera','1 unidad','60gr']], :v => '400', :p => '10', :g => '20', :h => '10')
-                        	expect(@lista1.head[:v]).to have_attributes(:t => 'MERIENDA', :ing => '15%', :pl =>[['Manzana','1 unidad','60gr'],['Pera','1 unidad','60gr']], :v => '400', :p => '10', :g => '20', :h => '10')
-                	end
-
-                	it 'Mostrar el valor de la cabeza' do
-                        	 expect(@lista1.head[:v]).to have_attributes(:t => 'MERIENDA', :ing => '15%', :pl =>[['Manzana','1 unidad','60gr'],['Pera','1 unidad','60gr']], :v => '400', :p => '10', :g => '20', :h => '10')
-                	end
-
-                	it 'Mostrar el contenido' do
-                        	expect(@lista1.to_s).to eq("1) MERIENDA (15%)\n- Manzana, 1 unidad, 60gr\n- Pera, 1 unidad, 60gr\nV.C.T | %\t400 kcal | 10% - 20% - 10%\n\n2) ALMUERZO (15%)\n- Manzana, 1 unidad, 60gr\n- Pera, 1 unidad, 60gr\nV.C.T | %\t400 kcal | 10% - 20% - 10%\n\n3) DESAYUNO (15%)\n- Manzana, 1 unidad, 60gr\n- Pera, 1 unidad, 60gr\nV.C.T | %\t400 kcal | 10% - 20% - 10%\n\n")
-                	end
-
-        	end
-
-	end
-end
-=end
 
 describe "Pruebas nodo" do
 
@@ -120,6 +65,56 @@ describe Lista_DE do
 
 		end
 	end
+
+	context "Pruebas de la lista_DE probando menus" do
+	
+		before :all do
+			@lista_DE2 = Lista_DE.new()
+
+			
+                        @desayuno = Dieta::Dieta.new('DESAYUNO','15%',[['Leche Denatada','1 vaso','200ml'],['Colacao','1 cucharada','10gr'],['Cereales','1 bol pequeño','40gr'],['Almendras laminadas','2 cucharadas','20gr']],'400','10','20','10')
+               	        @almuerzo = Dieta::Dieta.new('ALMUERZO','30%',[['Macarrones con salsa de tomate y queso parmesano','1 plato','200gr'],['Escalope de ternera','1 bistec mediano','100gr'],['Ensalada básica con zanahoria rayada','guarnición','120gr'],['Mandarina','1 grande','60gr'],['Pan de trigo','1 rodaja','40gr']],'400','10','20','10')
+               	        @merienda = Dieta::Dieta.new('MERIENDA','15%',[['Manzana','1 unidad','60gr'],['Galletas integrales','4 unidad','80gr']],'400','10','20','10')
+               	        @cena = Dieta::Dieta.new('CENA','15%',[['Crema de bubango','1 cucharon','100gr'],['Tortilla con espinacas','1 porción','60gr'],['Tomate con atun en dados','5 cucharadas','150gr'],['Piña natural o en su jugo','5 cucharadas','120gr'],['Pan integral','1 rebanada','20gr']],'400','10','20','10')
+
+			@lista_DE_PE = Lista_DE.new()
+
+			@desayuno1 = Dieta::Edad.new('DESAYUNO','15%',[['Leche Denatada','1 vaso','200ml'],['Colacao','1 cucharada','10gr'],['Cereales','1 bol pequeño','40gr']],'400','10','20','10','4 a 8 años')
+
+
+			@lista_DE_PA = Lista_DE.new()
+			
+			@desayuno2 = Dieta::Alimentos.new('DESAYUNO','15%',[['Leche Denatada','1 vaso','200ml'],['Colacao','1 cucharada','10gr'],['Cereales','1 bol pequeño','40gr']],'400','10','20','10','Vegetariano')
+
+		end
+
+		it "Introduciendo menus" do
+			 @lista_DE2.insert_ini(@desayuno)
+			 expect(@lista_DE2.head[:v]).to have_attributes(:t => 'DESAYUNO', :ing => '15%', :pl =>[['Leche Denatada','1 vaso','200ml'],['Colacao','1 cucharada','10gr'],['Cereales','1 bol pequeño','40gr'],['Almendras laminadas','2 cucharadas','20gr']], :v => '400', :p => '10', :g => '20', :h => '10')
+			 @lista_DE2.insert_ini(@almuerzo)
+                         expect(@lista_DE2.head[:v]).to have_attributes(:t => 'ALMUERZO', :ing => '30%', :pl =>[['Macarrones con salsa de tomate y queso parmesano','1 plato','200gr'],['Escalope de ternera','1 bistec mediano','100gr'],['Ensalada básica con zanahoria rayada','guarnición','120gr'],['Mandarina','1 grande','60gr'],['Pan de trigo','1 rodaja','40gr']], :v => '400', :p => '10', :g => '20', :h => '10')
+                         @lista_DE2.insert_ini(@merienda)
+                         expect(@lista_DE2.head[:v]).to have_attributes(:t => 'MERIENDA', :ing => '15%', :pl =>[['Manzana','1 unidad','60gr'],['Galletas integrales','4 unidad','80gr']], :v => '400', :p => '10', :g => '20', :h => '10')
+                         @lista_DE2.insert_ini(@cena)
+                         expect(@lista_DE2.head[:v]).to have_attributes(:t => 'CENA', :ing => '15%', :pl =>[['Crema de bubango','1 cucharon','100gr'],['Tortilla con espinacas','1 porción','60gr'],['Tomate con atun en dados','5 cucharadas','150gr'],['Piña natural o en su jugo','5 cucharadas','120gr'],['Pan integral','1 rebanada','20gr']], :v => '400', :p => '10', :g => '20', :h => '10')
+			
+			@lista_DE_PE.insert_ini(@desayuno1)
+                        expect(@lista_DE_PE.head[:v].to_s).to eq("DESAYUNO (15%)\n- Leche Denatada, 1 vaso, 200ml\n- Colacao, 1 cucharada, 10gr\n- Cereales, 1 bol pequeño, 40gr\nV.C.T | %\t400 kcal | 10% - 20% - 10%\n4 a 8 años")
+
+			
+                        @lista_DE_PA.insert_ini(@desayuno2)
+                        expect(@lista_DE_PA.head[:v].to_s).to eq("DESAYUNO (15%)\n- Leche Denatada, 1 vaso, 200ml\n- Colacao, 1 cucharada, 10gr\n- Cereales, 1 bol pequeño, 40gr\nV.C.T | %\t400 kcal | 10% - 20% - 10%\nVegetariano")
+           		end
+
+
+		it "Mostrar el contenido" do
+			
+                         expect(@lista_DE_PE.to_s).to eq("1) DESAYUNO (15%)\n- Leche Denatada, 1 vaso, 200ml\n- Colacao, 1 cucharada, 10gr\n- Cereales, 1 bol pequeño, 40gr\nV.C.T | %\t400 kcal | 10% - 20% - 10%\n4 a 8 años\n")
+			 expect(@lista_DE_PA.to_s).to eq("1) DESAYUNO (15%)\n- Leche Denatada, 1 vaso, 200ml\n- Colacao, 1 cucharada, 10gr\n- Cereales, 1 bol pequeño, 40gr\nV.C.T | %\t400 kcal | 10% - 20% - 10%\nVegetariano\n")
+		
+
+		end
+	end
 end
 
 
@@ -139,7 +134,7 @@ describe Dieta do
 		end
 		
 	        it "Mostrar el contenido" do
-		       expect(@edad1.mostrar_edad).to eq("MERIENDA (15%)\n- Manzana, 1 unidad, 60gr\n- Pera, 1 unidad, 60gr\nV.C.T | %\t400 kcal | 10% - 20% - 10%\n4 a 8 años")
+		       expect(@edad1.to_s).to eq("MERIENDA (15%)\n- Manzana, 1 unidad, 60gr\n- Pera, 1 unidad, 60gr\nV.C.T | %\t400 kcal | 10% - 20% - 10%\n4 a 8 años")
                 end
 		
 		it " Dieta es superclass de alimentos" do
@@ -147,8 +142,17 @@ describe Dieta do
 			expect(Dieta::Alimentos.superclass).to eq(Dieta::Dieta)
 		end
 
+		it " Pruebas de herencia" do
+
+			expect(@edad1.is_a?Dieta::Dieta).to eq(true)
+			expect(@alimentos.is_a?Dieta::Dieta).to eq(true)
+			
+			expect(@edad1.instance_of?Dieta::Edad).to eq(true)
+		end
+
+
 		it "Mostrar el contenido alimentos" do
-			expect(@alimentos.mostrar_alimentos).to eq("MERIENDA (15%)\n- Manzana, 1 unidad, 60gr\n- Pera, 1 unidad, 60gr\nV.C.T | %\t400 kcal | 10% - 20% - 10%\nverduras y hortalizas")
+			expect(@alimentos.to_s).to eq("MERIENDA (15%)\n- Manzana, 1 unidad, 60gr\n- Pera, 1 unidad, 60gr\nV.C.T | %\t400 kcal | 10% - 20% - 10%\nverduras y hortalizas")
 		end
 	end
 

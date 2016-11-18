@@ -75,7 +75,7 @@ class Lista_DE
 		z=1
 		aux=@head
 		m =""
-		while(aux[:s] != nil)
+		while(aux != nil)
 
 			m += "#{z}) #{aux[:v].to_s}\n"
 			aux = aux[:s]
