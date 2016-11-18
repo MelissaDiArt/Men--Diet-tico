@@ -105,5 +105,11 @@ describe Lista_DE do
 	
 			expect(@lista_DE1.tail[:v]).to eq(5)
 		end
+
+		it "Insertar por el final un elemento en la lista" do
+			@lista_DE1.insert_fin(4)
+			expect(@lista_DE1.tail[:v]).to eq(4)
+			expect(@lista_DE1.tail[:p][:v]).to eq(5)
+		end
 	end
 end
