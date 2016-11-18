@@ -46,7 +46,7 @@ describe Dieta do
 		end
 	end
 end
-
+=begin
 describe Nodo do
 
 	context "Existe un nodo" do
@@ -95,5 +95,5 @@ describe Lista do
 
 end
 
-
+=end
 
