@@ -120,3 +120,19 @@ describe Lista_DE do
 		end
 	end
 end
+
+
+describe Edad do
+
+	context "Pruebas de herencia" do
+
+		before :all do
+
+			@edad1 = Edad.new()
+		end
+	end
+
+
+
+
+end
