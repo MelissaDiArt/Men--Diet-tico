@@ -135,10 +135,11 @@ describe Lista_DE do
 
 		end
 
-		it " Se puede hacer MAX " do
+		it " Se puede hacer MAX, MIN, SORT " do
 
 			expect(@listaE.max).to eq(3)
-		
+			expect(@listaE.min).to eq(1)
+			expect(@listaE.sort).to eq([1, 2, 3])		
 		end
 
 
