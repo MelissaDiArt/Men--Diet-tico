@@ -88,6 +88,7 @@ describe Lista_DE do
 
 		end
 
+
 		it "Introduciendo menus" do
 			 @lista_DE2.insert_ini(@desayuno)
 			 expect(@lista_DE2.head[:v]).to have_attributes(:t => 'DESAYUNO', :ing => '15%', :pl =>[['Leche Denatada','1 vaso','200ml'],['Colacao','1 cucharada','10gr'],['Cereales','1 bol pequeño','40gr'],['Almendras laminadas','2 cucharadas','20gr']], :v => '400', :p => '10', :g => '20', :h => '10')
@@ -114,6 +115,33 @@ describe Lista_DE do
 		
 
 		end
+	end
+
+	context "Pruebas Enumerable Numeros" do
+		
+		before :all do
+			@listaE = Lista_DE.new()
+
+		end
+
+		it " Insertando valores" do
+
+			@listaE.insert_ini(1)
+			expect(@listaE.head[:v]).to eq(1)
+			@listaE.insert_ini(2)
+                        expect(@listaE.head[:v]).to eq(2)
+			@listaE.insert_ini(3)
+                        expect(@listaE.head[:v]).to eq(3)
+
+		end
+
+		it " Se puede hacer MAX " do
+
+			expect(@listaE.max).to eq(3)
+		
+		end
+
+
 	end
 end
 
@@ -156,3 +184,6 @@ describe Dieta do
 		end
 	end
 end
+
+
+
