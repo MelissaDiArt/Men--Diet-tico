@@ -144,6 +144,38 @@ describe Lista_DE do
 
 
 	end
+
+
+	context "Pruebas Enumerable Dieta" do
+
+		before :all do
+			@listaED = Lista_DE.new()
+		
+		  	@desayuno = Dieta::Dieta.new('DESAYUNO','15%',[['Leche Denatada','1 vaso','200ml'],['Colacao','1 cucharada','10gr'],['Cereales','1 bol pequeño','40gr'],['Almendras laminadas','2 cucharadas','20gr']],'300','10','20','10')
+                        @almuerzo = Dieta::Dieta.new('ALMUERZO','30%',[['Macarrones con salsa de tomate y queso parmesano','1 plato','200gr'],['Escalope de ternera','1 bistec mediano','100gr'],['Ensalada basica con zanahoria rayada','guarnicion','120gr'],['Mandarina','1 grande','60gr'],['Pan de trigo','1 rodaja','40gr']],'400','30','20','10')
+                        @merienda = Dieta::Dieta.new('MERIENDA','15%',[['Manzana','1 unidad','60gr'],['Galletas integrales','4 unidad','80gr']],'400','10','20','10')
+                        @cena = Dieta::Dieta.new('CENA','15%',[['Crema de bubango','1 cucharon','100gr'],['Tortilla con espinacas','1 porcin','60gr'],['Tomate con atun en dados','5 cucharadas','150gr'],['Piña natural o en su jugo','5 cucharadas','120gr'],['Pan integral','1 rebanada','20gr']],'600','10','20','10')
+
+		end 
+
+		it "Insertando valores menu" do
+
+		 	 @listaED.insert_ini(@desayuno)
+                         expect(@listaED.head[:v]).to have_attributes(:t => 'DESAYUNO', :ing => '15%', :pl =>[['Leche Denatada','1 vaso','200ml'],['Colacao','1 cucharada','10gr'],['Cereales','1 bol pequeño','40gr'],['Almendras laminadas','2 cucharadas','20gr']], :v => '300', :p => '10', :g => '20', :h => '10')
+                         @listaED.insert_ini(@almuerzo)
+                         expect(@listaED.head[:v]).to have_attributes(:t => 'ALMUERZO', :ing => '30%', :pl =>[['Macarrones con salsa de tomate y queso parmesano','1 plato','200gr'],['Escalope de ternera','1 bistec mediano','100gr'],['Ensalada basica con zanahoria rayada','guarnicion','120gr'],['Mandarina','1 grande','60gr'],['Pan de trigo','1 rodaja','40gr']], :v => '400', :p => '30', :g => '20', :h => '10')
+                         @listaED.insert_ini(@merienda)
+                         expect(@listaED.head[:v]).to have_attributes(:t => 'MERIENDA', :ing => '15%', :pl =>[['Manzana','1 unidad','60gr'],['Galletas integrales','4 unidad','80gr']], :v => '400', :p => '10', :g => '20', :h => '10')
+                         @listaED.insert_ini(@cena)
+                         expect(@listaED.head[:v]).to have_attributes(:t => 'CENA', :ing => '15%', :pl =>[['Crema de bubango','1 cucharon','100gr'],['Tortilla con espinacas','1 porcin','60gr'],['Tomate con atun en dados','5 cucharadas','150gr'],['Piña natural o en su jugo','5 cucharadas','120gr'],['Pan integral','1 rebanada','20gr']], :v => '600', :p => '10', :g => '20', :h => '10')
+
+
+		end
+
+
+
+	end
+
 end
 
 
