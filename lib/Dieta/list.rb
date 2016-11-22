@@ -1,13 +1,26 @@
 Nodo=Struct.new(:v,:s,:p)
 
 class Lista_DE
-
+	
+	include Enumerable
 	attr_accessor :head , :tail
 	
 	def initialize()
 
 		@head = nil
 		@tail = nil
+	end
+
+	def each 
+
+		i = @head
+		
+		while (!i.nil?)
+			
+			yield i.v
+			i=i.s			
+		end
+
 	end
 
 	def insert_ini(valor)
