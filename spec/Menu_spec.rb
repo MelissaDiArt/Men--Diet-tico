@@ -172,7 +172,14 @@ describe Lista_DE do
 
 		end
 
+		it "Se puede hacer MAX,MIN,SORT" do
 
+			expect(@listaED.max).to eq("1) CENA (15%)\n- Crema de bubango, 1 cucharon, 100gr\n- Tortilla de espinacas, 1 porcin, 60gr\n- Tomate con atun en dados, 5 cucharadas, 150gr\n- Piña natural o en su jugo, 5 cucharadas, 120gr\n- Pan integral, 1 rebanada, 20gr\nV.C.T | %\t600 kcal | 10% - 20% - 10%\n")
+                        expect(@listaED.min).to eq("1) DESAYUNO (15%)\n- Leche Denatada, 1 vaso, 200ml\n- Colacao, 1 cucharada, 10gr\n- Cereales, 1 bol pequeño, 40gr\nV.C.T | %\t300 kcal | 10% - 20% - 10%\n")
+                        expect(@listaED.sort).to eq([1, 2, 3])
+
+
+		end
 
 	end
 
