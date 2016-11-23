@@ -13,6 +13,14 @@ module Dieta
 			v<=>v1.v
 		end  
 
+		def == (v1)
+			if ((p==v1.p) && (g==v1.g) && (h==v1.h))
+				return true
+			else
+				return false
+			end
+		end
+
 		def get_plato(i)
 			@pl[i]
 		end
