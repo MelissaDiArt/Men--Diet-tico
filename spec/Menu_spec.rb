@@ -178,6 +178,11 @@ describe Lista_DE do
                         expect(@listaED.min).to eq(@desayuno)
                         expect(@listaED.sort).to eq([@desayuno, @merienda, @almuerzo, @cena])
 
+		end
+
+		it " Funciona == " do
+
+			expect(@merienda==@almuerzo).to eq(false)
 
 		end
 
