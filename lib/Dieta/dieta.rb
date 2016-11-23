@@ -1,9 +1,18 @@
 module Dieta
+
 	class Dieta
+
+		include Comparable
 		attr_reader :t, :ing, :pl, :v, :p, :g, :h
 		def initialize(t,ing,pl,v,p,g,h)
 			@t, @ing, @pl, @v, @p, @g, @h = t, ing, pl, v, p, g, h
 		end
+
+		def <=>(v1)
+
+			v<=>v1.v
+		end  
+
 		def get_plato(i)
 			@pl[i]
 		end
