@@ -30,6 +30,18 @@ describe Dieta do
 			expect(@almuerzo.titular).to eq("Almuerzo")
 		end
 		
+		it "Contiene un porcentaje de ingesta" do
+      		      expect(@almuerzo.ingesta).not_to be(nil)
+        	end
+   
+	        it "Contiene platos" do
+        	      expect(@almuerzo.platos).not_to be(nil)
+        	end
+
+   	        it "No es un valor nulo" do
+        	     expect(@almuerzo.valor).not_to be(nil)
+        	end
+   		
     	end
 
 	
