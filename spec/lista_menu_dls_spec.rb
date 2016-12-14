@@ -52,7 +52,10 @@ describe Lista_DE do
         	@dia1.insert_ini(@cena)
         	@dia2 = Lista_DE.new()
         	@dia2.insert_ini(@desayuno)
-        	@dia2.insert_ini(@cena)	
+        	@dia2.insert_ini(@cena)
+		@semana = Lista_DE.new()
+		@semana.insert_ini(@dia2)
+		@semana.insert_ini(@dia2)	
 	end
 		
 		it "El menu diario tiene head" do
@@ -67,7 +70,11 @@ describe Lista_DE do
 		it "El menu diario se muestra bien" do
            		 expect(@dia2.to_s).to eq("1) Cena\n====\n\n20% - 25%\n\n1)  Pasta con queso | 1 | 250 gramos\n\n2)  Cola-cao | 1 | 75 gramos\n\nV.C.T | %\t467 kcal | 0% - 34% - 77%\n\n2) Desayuno\n========\n\n20% - 25%\n\n1)  Churros con chocolate | 1 | 250 gramos\n\n2)  Cafe con leche | 1 | 75 gramos\n\nV.C.T | %\t999.9 kcal | 9% - 74% - 37%\n\n")
         	end
+		
+		it "El menu semanal se muestra correctamente" do
+			expect(@semana.to_s).to eq("Dieta numero 1 de la semana\n 1) Cena\n====\n\n20% - 25%\n\n1)  Pasta con queso | 1 | 250 gramos\n\n2)  Cola-cao | 1 | 75 gramos\n\nV.C.T | %\t467 kcal | 0% - 34% - 77%\n\n2) Desayuno\n========\n\n20% - 25%\n\n1)  Churros con chocolate | 1 | 250 gramos\n\n2)  Cafe con leche | 1 | 75 gramos\n\nV.C.T | %\t999.9 kcal | 9% - 74% - 37%\n\n\nDieta numero 2 de la semana\n 1) Cena\n====\n\n20% - 25%\n\n1)  Pasta con queso | 1 | 250 gramos\n\n2)  Cola-cao | 1 | 75 gramos\n\nV.C.T | %\t467 kcal | 0% - 34% - 77%\n\n2) Desayuno\n========\n\n20% - 25%\n\n1)  Churros con chocolate | 1 | 250 gramos\n\n2)  Cafe con leche | 1 | 75 gramos\n\nV.C.T | %\t999.9 kcal | 9% - 74% - 37%\n\n\n")
 
+		end
 end
 
 
