@@ -1,9 +1,27 @@
-re "spec_helper"
+require "spec_helper"
 
 require "./lib/dieta.rb"
 
 describe "Pruebas de la practica 11" do
 
+	before: all do
+		
+		@almuerzo = Menu_dsl.new("Algo") do
+            		titulo  "Almuerzo"
+            		ingesta :min => 30, :max => 35
+            		plato   :descripcion => "Macarrones con salsa de tomate y queso parmesano",
+                    		:porcion => "1 1/2 cucharon",
+                    		:gramos => 200
 
+            		plato   :descripcion => "Escalope de ternera",
+                    		:porcion => "1 bistec mediano",
+                    		:gramos => 100
+           	        plato   :descripcion => "Ensalada basica con zanahoria rallada",
+                    		:porcion => "guarnicion",
+                    		:gramos => 120
+            		plato :descripcion => "Mandarina", :porcion => "1 grande", :gramos => 180
+            		plato :descripcion => "Pan de trigo integral", :porcion => "1 rodaja", :gramos => 20
+            		valor :vct => 785.9, :proteinas => 19, :grasas => 34, :hidratos => 47
+	end
 
 end
