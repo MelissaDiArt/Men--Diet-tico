@@ -43,7 +43,7 @@ describe Dieta do
         	end
 
 		it "La funcion to_s debe mostrar el menu adecuadamente" do
-            		expect(@almuerzo.to_s).to eq("Almuerzo\n========\n\n30% - 35%\n\n1)  Macarrones con salsa de tomate y queso parmesano | 1 1/2 cucharon | 200 gramos\n\n2)  Escalope de ternera | 1 bistec mediano | 100 gramos\n\n3)  Ensalada basica con zanahoria rallada | guarnicion | 120 gramos\n\n4)  Mandarina | 1 grande | 180 gramos\n\n5)  Pan de trigo integral | 1 rodaja | 20 gramos\n\nV.C.T | %785.9 kcal | 19% - 34% - 47%\n")
+            		expect(@almuerzo.to_s).to eq("Almuerzo\n========\n\n30% - 35%\n\n1)  Macarrones con salsa de tomate y queso parmesano | 1 1/2 cucharon | 200 gramos\n\n2)  Escalope de ternera | 1 bistec mediano | 100 gramos\n\n3)  Ensalada basica con zanahoria rallada | guarnicion | 120 gramos\n\n4)  Mandarina | 1 grande | 180 gramos\n\n5)  Pan de trigo integral | 1 rodaja | 20 gramos\n\nV.C.T | %\t785.9 kcal | 19% - 34% - 47%\n")
         	end
 	end	
 

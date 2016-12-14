@@ -45,7 +45,21 @@ module Dieta
       		@valores << options[:hidratos] if options[:hidratos]
       		@valores
     	end
+	
+	def to_s
+      		output = "#{@titular}"
+      		output << "\n#{'=' * @titular.size}\n\n"
 
+      		output << "#{@ingestas[0]}% - #{@ingestas[1]}%\n\n"
+
+      		platos.each_with_index do |plato, index|
+        		output << "#{index + 1}) #{plato[0]}#{plato[1]}#{plato[2]}"
+      		end
+
+      		output << "V.C.T | %\t#{valores[0]} kcal | #{valores[1]}% - #{valores[2]}% - #{valores[3]}%\n"
+     		output
+
+    	end
 
 	end
 end
