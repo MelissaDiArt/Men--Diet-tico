@@ -1,8 +1,11 @@
-class Menu_dsl
+module Dieta
+
+	class Menu_dsl
 
 
 
 
 
 
+	end
 end
