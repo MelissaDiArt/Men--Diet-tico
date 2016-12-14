@@ -90,9 +90,14 @@ class Lista_DE
 		m =""
 		while(aux != nil)
 
-			m += "#{z}) #{aux[:v].to_s}\n"
-			aux = aux[:s]
-			z += 1
+			if(aux[:v].is_a?Lista_DE)
+                		m+= "Dieta numero #{z} de la semana\n"
+           		else
+                		m+= "#{z})"
+            		end
+            		m += " #{aux[:v].to_s}\n"
+            		aux = aux[:s]
+            		z +=1
 		end
 		m
 	end

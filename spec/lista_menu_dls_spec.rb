@@ -65,7 +65,7 @@ describe Lista_DE do
 		end
 		
 		it "El menu diario se muestra bien" do
-           		 expect(@dia2.to_s).to eq("1) Cena\n====\n\n20% - 25%\n\n1)  Pasta con queso | 1 | 250 gramos\n\n2)  Cola-cao | 1 | 75 gramos\n\nV.C.T | %467 kcal | 0% - 34% - 77%\n\n2) Desayuno\n========\n\n20% - 25%\n\n1)  Churros con chocolate | 1 | 250 gramos\n\n2)  Cafe con leche | 1 | 75 gramos\n\nV.C.T | %999.9 kcal | 9% - 74% - 37%\n\n")
+           		 expect(@dia2.to_s).to eq("1) Cena\n====\n\n20% - 25%\n\n1)  Pasta con queso | 1 | 250 gramos\n\n2)  Cola-cao | 1 | 75 gramos\n\nV.C.T | %\t467 kcal | 0% - 34% - 77%\n\n2) Desayuno\n========\n\n20% - 25%\n\n1)  Churros con chocolate | 1 | 250 gramos\n\n2)  Cafe con leche | 1 | 75 gramos\n\nV.C.T | %\t999.9 kcal | 9% - 74% - 37%\n\n")
         	end
 
 end
