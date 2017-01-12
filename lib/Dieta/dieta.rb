@@ -1,5 +1,8 @@
 module Dieta
+=begin
+Comentarios del rdoc en begin
 
+=end
 	class Dieta
 
 		include Comparable
