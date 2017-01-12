@@ -1,5 +1,9 @@
 module Dieta
+=begin
 
+	este comentario es del begin
+
+=end
 	class Menu_dsl
 		    
 		    
